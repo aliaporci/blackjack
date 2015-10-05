@@ -1,0 +1,10 @@
+<h1>Games</h1>
+
+<%= link_to 'Have a seat at a table', new_game_path, method: :post, class: 'btn btn-primary' %>
+
+
+<ul>
+  <% @games.each do |game| %>
+  <li><%= link_to game_path(id: game.id) do %> Game <%= game.id %><% end %>, created at: <%= game.created_at %></li>
+  <% end %>
+</ul>

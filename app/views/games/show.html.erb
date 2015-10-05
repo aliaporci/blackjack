@@ -1,0 +1,23 @@
+<h1>Games#show</h1>
+<p>Find me in app/views/games/show.html.erb</p>
+
+<ul>
+  <% @game.cards.each do |card| %>
+  <li><%= image_tag card.image %></li>
+  <% end %>
+</ul>
+
+<div class="row align-center">
+  <% @game.dealer_hand.cards.each do |card| %>
+  <%= image_path("#{card.image}") %>
+  <% end %>
+</div>
+
+<div class="row align-center">
+Hit
+Stay
+</div>
+
+<div class="row align-center">
+
+</div>
